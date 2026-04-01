@@ -36,11 +36,9 @@
     - name: display uptime
       debug:
               var: uptime_output.stdout
-        - name: display uptime 
-          command: uptime
-          register: uptime_output
-
-
+    - name: display uptime 
+      command: uptime
+      register: uptime_output
     - name: display uptime
       debug:
           msg: "{{ uptime_output.stdout }}"
